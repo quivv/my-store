@@ -1,4 +1,6 @@
 import React from "react";
+import GotoTop from "./GotoTop";
+import Product from "./Product";
 
 const Home = () => {
   return (
@@ -36,18 +38,18 @@ const Home = () => {
             aria-label="Slide 4"
           ></button>
         </div>
-        <div className="carousel-inner">
+        <div className="carousel-inner ">
           <div className="carousel-item active">
-            <img src="/assets/images/home/image1.webp" className="d-block w-100" alt="Iphone" height="800px" />
+            <img src="/assets/images/home/image1.jpg" className="d-block w-100" alt="Iphone" height="800px"/>
           </div>
           <div className="carousel-item">
-            <img src="/assets/images/home/image2.webp" className="d-block w-100" alt="Iphone" height="800px" />
+            <img src="/assets/images/home/image2.webp" className="d-block w-100" alt="Iphone" height="800px"/>
           </div>
           <div className="carousel-item">
-            <img src="/assets/images/home/image3.webp" className="d-block w-100" alt="Iphone" height="800px" />
+            <img src="/assets/images/home/image3.webp" className="d-block w-100" alt="Iphone" height="800px"/>
           </div>
           <div className="carousel-item">
-            <img src="/assets/images/home/image4.webp" className="d-block w-100" alt="Iphone" height="800px" />
+            <img src="/assets/images/home/image4.webp" className="d-block w-100" alt="Iphone" height="800px"/>
           </div>
         </div>
         <button
@@ -75,6 +77,8 @@ const Home = () => {
           <span className="visually-hidden">Next</span>
         </button>
       </div>
+      <Product/>  
+      <GotoTop/>    
     </>
   );
 };
