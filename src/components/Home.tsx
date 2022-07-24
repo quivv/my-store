@@ -1,8 +1,7 @@
 import React from "react";
-import GotoTop from "./GotoTop";
-import Product from "./Product";
+import {GotoTop, Product} from './';
 
-const Home = () => {
+export function Home(): React.ReactElement{
   return (
     <>
       <div
@@ -82,5 +81,3 @@ const Home = () => {
     </>
   );
 };
-
-export default Home;

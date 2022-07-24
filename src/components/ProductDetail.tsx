@@ -1,13 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useParams } from 'react-router'
 import { DATA } from '../Data';
 import format from '../format';
 import { ProductType } from '../Type';
+import { useDispatch } from 'react-redux';
+import { addItem, delItem } from '../redux/actions';
 
-const ProductDetail = () => {
+export function ProductDetail():React.ReactElement {
+  const [cartBtn, setCartBtn] = useState<string>("Add to Cart")
   const {id} = useParams<string>();  
   const proDetail: ProductType[] = DATA.filter(x => x.id.toString() === id)
   const product:ProductType = proDetail[0]
+
+  const disPatch = useDispatch()
+  const handleCart = (product: ProductType) => {
+    if(cartBtn === "Add to Cart"){
+      disPatch(addItem(product))
+      setCartBtn("Remove from Cart")
+    }else{
+      disPatch(delItem(product))
+      setCartBtn("Add to Cart")
+    }
+
+  }
 
   return (
     <>
@@ -21,12 +36,10 @@ const ProductDetail = () => {
             <hr/>
             <h2 className="my-4">{format(product.price)} VNĐ</h2>
             <p className="lead">{product.desc}</p>
-            <button className="btn btn-outline-primary my-5">Add to Cart</button>
+            <button className="btn btn-outline-primary my-5" onClick={() => handleCart(product)}>{cartBtn}</button>
           </div>
         </div>
       </div>
     </>
   )
 }
-
-export default ProductDetail

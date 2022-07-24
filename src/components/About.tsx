@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 
-const About = () => {
+export function About(): React.ReactElement{
   return (
     <div>
       <div className="container">
@@ -32,5 +32,3 @@ const About = () => {
     </div>
   );
 }
-
-export default About

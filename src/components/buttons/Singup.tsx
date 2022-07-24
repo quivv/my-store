@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Singup = () => {
+export const Singup = () => {
   return (
     <div>
       {/* <!-- Button trigger modal --> */}
@@ -103,6 +103,4 @@ const Singup = () => {
       </div>
     </div>
   )
-}
-
-export default Singup
+};

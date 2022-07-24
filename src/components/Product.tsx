@@ -3,9 +3,9 @@ import { NavLink } from 'react-router-dom'
 import { DATA } from '../Data'
 import format from '../format'
 import { ProductType } from '../Type'
-import GotoTop from './GotoTop'
+import {GotoTop} from './'
 
-const Product = () => {
+export function Product(): React.ReactElement {
   const CartItem: React.FC<ProductType> = (item) => {
     return (
       <div className="card mx-3 my-3" style={{width: "18rem"}} key={item.id}>
@@ -38,5 +38,3 @@ const Product = () => {
     </>
   )
 }
-
-export default Product

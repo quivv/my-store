@@ -1,6 +1,6 @@
 import React from "react";
 
-const Login = () => {
+export function Login(): React.ReactElement {
   return (
     <div>
       {/* <!-- Button trigger modal --> */}
@@ -93,5 +93,3 @@ const Login = () => {
     </div>
   );
 };
-
-export default Login;

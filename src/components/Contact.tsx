@@ -1,6 +1,6 @@
 import React from "react";
 
-const Contact = () => {
+export function Contact():React.ReactElement{
   return (
     <>
       <div className="container">
@@ -67,5 +67,3 @@ const Contact = () => {
     </>
   );
 };
-
-export default Contact;

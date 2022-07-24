@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { NavLink } from 'react-router-dom'
 
-const GotoTop = () => {
+export function GotoTop(): React.ReactElement {
   const [showTop, setShowTop] = useState<Boolean>(false)
 
   useEffect(() => {
@@ -30,5 +29,3 @@ const GotoTop = () => {
     </>
   )
 }
-
-export default GotoTop

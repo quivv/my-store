@@ -1,10 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import Cart from "./buttons/Cart";
-import Login from "./buttons/Login";
-import Singup from "./buttons/Singup";
+import {Cart, Login, Singup} from "./buttons";
 
-const Header = () => {
+export function Header(): React.ReactElement {
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-light">
@@ -55,5 +53,3 @@ const Header = () => {
     </>
   );
 };
-
-export default Header;

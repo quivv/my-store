@@ -1,13 +1,7 @@
 import React from 'react';
 import './App.css';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import Home from './components/Home';
-import Product from './components/Product';
-import About from './components/About';
-import Contact from './components/Contact';
+import {About, Contact, Product, Home, Header, Footer, ProductDetail} from './components';
 import {Routes, Route } from 'react-router-dom'
-import ProductDetail from './components/ProductDetail';
 
 function App() {
   return (
